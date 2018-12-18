@@ -312,7 +312,7 @@ class CapitalT(object):
           :rtype: CapitalT
         """
         # ---------------------------------------------------------------------
-        # TODO: 7.
+        # DONE: 7.
         #   READ the above specification, including the Example.
         #   Implement this method, then TEST it by:
         #     a. Un-comment the call to its test function, in main.  Run.
@@ -324,9 +324,13 @@ class CapitalT(object):
         # IMPORTANT RESTRICTION: You are NOT permitted to add any instance
         # variables beyond  h_rect  and  v_rect, at any point of this exercise.
         #######################################################################
-        return rg.Rectangle(self.v_rect.corner_1, self.v_rect.corner_2), \
-               rg.Rectangle(self.h_rect.corner_1, self.h_rect.corner_2)
-
+        t_clone = CapitalT(self.h_rect.get_center(), self.h_rect.get_width(), self.v_rect.get_height(),
+                     self.h_rect.get_height())
+        t_clone.v_rect.fill_color = self.v_rect.fill_color
+        t_clone.h_rect.fill_color = self.h_rect.fill_color
+        t_clone.v_rect.outline_color = self.v_rect.outline_color
+        t_clone.h_rect.outline_color = self.h_rect.outline_color
+        return t_clone
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
