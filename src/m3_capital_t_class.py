@@ -325,12 +325,13 @@ class CapitalT(object):
         # variables beyond  h_rect  and  v_rect, at any point of this exercise.
         #######################################################################
         t_clone = CapitalT(self.h_rect.get_center(), self.h_rect.get_width(), self.v_rect.get_height(),
-                     self.h_rect.get_height())
+                           self.h_rect.get_height())
         t_clone.v_rect.fill_color = self.v_rect.fill_color
         t_clone.h_rect.fill_color = self.h_rect.fill_color
         t_clone.v_rect.outline_color = self.v_rect.outline_color
         t_clone.h_rect.outline_color = self.h_rect.outline_color
         return t_clone
+
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
